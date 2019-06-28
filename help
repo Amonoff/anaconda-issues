@@ -1,0 +1,43 @@
+please HELP
+Navigator Error
+An unexpected error occurred on Navigator start-up
+
+Report
+Please report this issue in the anaconda issue tracker
+
+Main Error
+expected str, bytes or os.PathLike object, not NoneType
+Traceback
+Traceback (most recent call last):
+  File "C:\Users\Ivor\Anaconda3\lib\site-packages\anaconda_navigator\app\start.py", line 147, in start_app
+    with lock.acquire(timeout=3.0):  # timeout in seconds
+  File "C:\Users\Ivor\Anaconda3\lib\site-packages\anaconda_navigator\external\filelock.py", line 259, in acquire
+    raise Timeout(self._lock_file)
+anaconda_navigator.external.filelock.Timeout: The file lock 'C:\Users\Ivor\.anaconda\navigator\navigator.lock' could not be acquired.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ivor\Anaconda3\lib\site-packages\anaconda_navigator\exceptions.py", line 75, in exception_handler
+    return_value = func(*args, **kwargs)
+  File "C:\Users\Ivor\Anaconda3\lib\site-packages\anaconda_navigator\app\start.py", line 160, in start_app
+    "There is an instance of "
+  File "C:\Users\Ivor\Anaconda3\lib\site-packages\anaconda_navigator\widgets\dialogs\__init__.py", line 451, in __init__
+    type_=self.INFORMATION_BOX,
+  File "C:\Users\Ivor\Anaconda3\lib\site-packages\anaconda_navigator\widgets\dialogs\__init__.py", line 265, in __init__
+    self.tracker = GATracker()
+  File "C:\Users\Ivor\Anaconda3\lib\site-packages\anaconda_navigator\utils\analytics.py", line 295, in GATracker
+    GA_TRACKER = _GATracker()
+  File "C:\Users\Ivor\Anaconda3\lib\site-packages\anaconda_navigator\utils\analytics.py", line 102, in __init__
+    self.api = AnacondaAPI()
+  File "C:\Users\Ivor\Anaconda3\lib\site-packages\anaconda_navigator\api\anaconda_api.py", line 2337, in AnacondaAPI
+    ANACONDA_API = _AnacondaAPI()
+  File "C:\Users\Ivor\Anaconda3\lib\site-packages\anaconda_navigator\api\anaconda_api.py", line 89, in __init__
+    self._conda_api = CondaAPI()
+  File "C:\Users\Ivor\Anaconda3\lib\site-packages\anaconda_navigator\api\conda_api.py", line 1773, in CondaAPI
+    CONDA_API = _CondaAPI()
+  File "C:\Users\Ivor\Anaconda3\lib\site-packages\anaconda_navigator\api\conda_api.py", line 353, in __init__
+    self.sys_rc_path = join(self.ROOT_PREFIX, '.condarc')
+  File "C:\Users\Ivor\Anaconda3\lib\ntpath.py", line 76, in join
+    path = os.fspath(path)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
